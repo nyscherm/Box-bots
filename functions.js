@@ -36,27 +36,27 @@ $(document).ready(function(){
 
 	//socket.send(JSON.stringify(demo);
 
-	$(".joystick").touchstart(function(){
+	$(".joystick").bind('mousedown touchstart', function(event) {
 		$(".coordinates").removeClass("hidden");
 	    $(".stem").removeClass("hidden");
 	    startTracking(this, "joystick");
-    }).touchend(function () {
+    }).bind('mouseup touchend', function(event) {
     	$(".coordinates").addClass("hidden");
     	$(".stem").addClass("hidden");
     	$(".joystick .handle").css("transform", "translate(0,0)");
     	stopTracking(this);
 	});
 
-	$(".sensitivity .slider").touchstart(function(){
+	$(".sensitivity .slider").bind('mousedown touchstart', function(event) {
 	    startTracking(this, "slider");
-    }).touchend(function () {
+    }).bind('mouseup touchend', function(event) {
     	stopTracking(this);
     	savedSettings.sliderPos = sliderPos;
 	});
 
-	$(".indicator").touchstart(function(){
+	$(".indicator").bind('mousedown touchstart', function(event) {
 	    startTracking(this, "indicator");
-    }).touchend(function () {
+    }).bind('mouseup touchend', function(event) {
     	stopTracking(this);
 		savedSettings.trimPos = indicatorPos;
 	});
@@ -101,9 +101,9 @@ $(document).ready(function(){
 		$("#mainScreen").removeClass("noShow");
 	});
 
-	$(".actionButton").touchstart(function(){
+	$(".actionButton").bind('mousedown touchstart', function(event) {
 		$(this).addClass("pressed");
-    }).touchend(function () {
+    }).bind('mouseup touchend', function(event) {
     	$(this).removeClass("pressed");
 	});
 
