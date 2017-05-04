@@ -1,0 +1,165 @@
+/* This file contains all the custom styles 
+for the battlebots controller web page */
+
+body {
+    background-color: powderblue;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+	font-size: 42px;
+}
+
+/* --Intro screen-- */
+
+#introScreen {
+	margin-top: 15%;
+}
+#bigStartButton {
+	background-color: darkorange;
+    color: darkred;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 275px;
+    border-radius: 15px;
+    margin: 0 25px;
+}
+
+/* --Main screen-- */
+
+.controller {
+	padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.column {
+	width: 45%;
+}
+.joystick {
+	width: 300px;
+	height: 300px;
+	border-radius: 25%;
+	background-color: grey;
+	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 15px #666;
+}
+.joystick .handle {
+	width: 150px;
+	height: 150px;
+	border: 1px solid darkgrey;
+	border-radius: 50%;
+	background-color: lightgrey;
+	background: -webkit-radial-gradient(lightgrey, grey);
+    background: -o-radial-gradient(lightgrey, grey);
+    background: -moz-radial-gradient(lightgrey, grey);
+    background: radial-gradient(lightgrey, grey);
+	margin: 0 auto;
+	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.4);
+}
+.joystick .stem {
+	width: 75px;
+	height: 75px;
+	left: 24%;
+    position: absolute;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background-color: #444;
+}
+.actionButton {
+	width: 100px;
+	height: 100px;
+	border: 1px solid cornflowerblue;
+	border-radius: 50%;
+	background-color: cornflowerblue;
+	margin: 25px auto 60px;
+	box-shadow: 4px 5px 2px #666;
+	opacity: .85;
+}
+.actionButton.red {
+	border-color: darkred;
+	border-radius: 50%;
+	background-color: darkred;
+}
+.actionButton.pressed {
+	box-shadow: none;
+	transform: translate(4px, 6px);
+	opacity: 1;
+}
+/* --Settings-- */
+#settings {
+	font-size: 28px;
+}
+.trim {
+	padding-bottom: 75px;
+}
+.sensitivity, .reverse {
+	width: 49%;
+	display: inline-block;
+}
+.slider {
+	width: 260px;
+	margin: 0 auto;
+    background-color: cadetblue;
+    border: 5px solid cadetblue;
+    border-radius: 15px;
+}
+.indicator {
+	width: 5px; 
+	height: 30px; 
+	font-weight: bold;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid khaki;
+	margin-left: 45%;
+}
+.switch {
+	width: 150px;
+	margin: 0 auto;
+    background-color: cadetblue;
+    border: 5px solid cadetblue;
+    border-radius: 15px;
+}
+.bar, .toggle {
+    height: 40px;
+    padding-top: 10px;
+	background-color: khaki;
+	width: 125px;
+    border-radius: 15px;
+}
+.reverse .toggle {
+	width: 75px;
+}
+
+/* --Miscellaneous-- */
+
+.settingsButton, .closeButton {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+    top: 20px;
+}
+.settingsButton {
+	box-shadow:0 0 0 6px grey inset; 
+	border-radius:50%; 
+	border:4px dashed grey;
+	transition-duration: .5s;
+}
+.closeButton {
+	background: url("img/glyphicons-remove-circle.png") no-repeat center;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.noShow {
+	display: none;
+}
