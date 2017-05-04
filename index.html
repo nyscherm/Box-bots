@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Battle bots!</title>
+
+    <!-- Customized styles -->
+	  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<!-- The screen that appears when a user first opens the page -->
+	<div id="introScreen">
+		<div id="bigStartButton">
+			PRESS THE BUTTON TO START
+		</div>
+	</div>
+
+	<!-- The screen with the bot controller -->
+	<div id="mainScreen" class="noShow">
+		<!-- Goes to the settings view -->
+		<div class="settingsButton"></div>
+
+		<!-- The bot controller -->
+		<div class="controller">
+			<div class="column">
+				<div class="joystick">
+					<div class="stem hidden"></div>
+					<div class="handle">
+					</div>
+				</div>
+				<div class="coordinates hidden">
+					X: Y:
+				</div>
+			</div>
+			<div class="column">
+				<div class="actionButton"></div>
+				<div class="actionButton red"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The settings view -->
+	<div id="settings" class="noShow">
+		<!-- Closes settings view -->
+		<div class="closeButton"></div>
+
+		<h1>Settings</h1>
+
+		<!-- Bot settings -->
+		<div class="trim">
+			<b>Trim</b>
+			<div class="scale">0</div>
+			<div class="slider">
+				<div class="indicator">|</div>
+			</div>
+		</div>
+		<div class="reverse">
+			<b>Reverse</b>
+			<div class="status">off</div>
+			<div class="switch">
+				<div class="toggle"></div>
+			</div>
+		</div>
+		<div class="sensitivity">
+			<b>Sensitivity</b>
+			<div class="percent">50%</div>
+			<div class="slider">
+				<div class="bar"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (JavaScript library) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+</body>
+</html>
