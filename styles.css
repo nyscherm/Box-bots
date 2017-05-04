@@ -13,7 +13,7 @@ h1 {
 /* --Intro screen-- */
 
 #introScreen {
-	margin-top: 15%;
+	margin-top: 5%;
 }
 #bigStartButton {
 	background-color: darkorange;
@@ -31,17 +31,29 @@ h1 {
 /* --Main screen-- */
 
 .controller {
-	padding-top: 120px;
+	padding-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .column {
 	width: 45%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row {
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .joystick {
-	width: 300px;
-	height: 300px;
+	width: 180px;
+	height: 180px;
 	border-radius: 25%;
 	background-color: grey;
 	margin: 0 auto;
@@ -51,8 +63,8 @@ h1 {
     box-shadow: 10px 15px #666;
 }
 .joystick .handle {
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border: 1px solid darkgrey;
 	border-radius: 50%;
 	background-color: lightgrey;
@@ -63,22 +75,13 @@ h1 {
 	margin: 0 auto;
 	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.4);
 }
-.joystick .stem {
+.actionButton {
 	width: 75px;
 	height: 75px;
-	left: 24%;
-    position: absolute;
-    border: 1px solid #444;
-    border-radius: 50%;
-    background-color: #444;
-}
-.actionButton {
-	width: 100px;
-	height: 100px;
 	border: 1px solid cornflowerblue;
 	border-radius: 50%;
 	background-color: cornflowerblue;
-	margin: 25px auto 60px;
+	margin: 5px auto;
 	box-shadow: 4px 5px 2px #666;
 	opacity: .85;
 }
@@ -104,20 +107,20 @@ h1 {
 	display: inline-block;
 }
 .slider {
-	width: 260px;
+	width: 180px;
+	height: 55px;
 	margin: 0 auto;
     background-color: cadetblue;
     border: 5px solid cadetblue;
     border-radius: 15px;
 }
 .indicator {
-	width: 5px; 
-	height: 30px; 
-	font-weight: bold;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid khaki;
-	margin-left: 45%;
+	width: 50px; 
+	height: 100%; 
+	margin-left: 40%;
+    background-color: khaki;
+    border-radius: 10px;
+    box-shadow: 4px 1px 2px #666;
 }
 .switch {
 	width: 150px;
@@ -127,7 +130,7 @@ h1 {
     border-radius: 15px;
 }
 .bar, .toggle {
-    height: 40px;
+    height: 65px;
     padding-top: 10px;
 	background-color: khaki;
 	width: 125px;
@@ -147,6 +150,7 @@ h1 {
     top: 20px;
 }
 .settingsButton {
+	display: none;
 	box-shadow:0 0 0 6px grey inset; 
 	border-radius:50%; 
 	border:4px dashed grey;
@@ -162,4 +166,36 @@ h1 {
 
 .noShow {
 	display: none;
+}
+
+/* Responsive sizing for different screens */
+@media (min-width: 640px) {
+	#introScreen {
+		margin-top: 15%;
+	}
+	.controller {
+		padding-top: 120px;
+	}
+	.joystick {
+		width: 300px;
+		height: 300px;
+	}
+	.joystick .handle {
+		width: 150px;
+		height: 150px;
+	}
+	.joystick .stem {
+		display: block;	
+	}
+	.actionButton {
+		width: 110px;
+		height: 110px;
+	}
+	.slider {
+		width: 260px;
+		height: 75px;
+	}
+	.settingsButton {
+		display: block;
+	}
 }
