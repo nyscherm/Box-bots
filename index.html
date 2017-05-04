@@ -3,8 +3,11 @@
 <head>
 	<title>Battle bots!</title>
 
+	<!-- Keeps users from zooming in -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <!-- Customized styles -->
-	  <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -23,18 +26,31 @@
 		<!-- The bot controller -->
 		<div class="controller">
 			<div class="column">
+				<div class="row">
+					<div class="row">
+						<div class="scale">0</div>
+					</div>
+					<div class="slider">
+						<div class="indicator"></div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="column">
+						<div class="actionButton"></div>
+					</div>
+					<div class="column">
+						<div class="actionButton red"></div>
+					</div>
+				</div>				
+			</div>
+			<div class="column">
 				<div class="joystick">
-					<div class="stem hidden"></div>
 					<div class="handle">
 					</div>
 				</div>
 				<div class="coordinates hidden">
 					X: Y:
 				</div>
-			</div>
-			<div class="column">
-				<div class="actionButton"></div>
-				<div class="actionButton red"></div>
 			</div>
 		</div>
 	</div>
@@ -51,7 +67,7 @@
 			<b>Trim</b>
 			<div class="scale">0</div>
 			<div class="slider">
-				<div class="indicator">|</div>
+				<div class="indicator"></div>
 			</div>
 		</div>
 		<div class="reverse">
