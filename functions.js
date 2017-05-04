@@ -18,7 +18,7 @@ reverse = savedSettings.reverse;
 $(document).ready(function(){
 
 	// Create a new WebSocket
-	var socket = new WebSocket('ws://echo.websocket.org');
+	var socket = new WebSocket('wss://echo.websocket.org');
 
 	socket.onopen = function(event) {
 	  	console.log('WebSocket opened');
